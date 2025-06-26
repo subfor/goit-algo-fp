@@ -67,7 +67,7 @@ class LinkedList:
             print(current.data)
             current = current.next
 
-    # ✅ 1. Реверсування списку
+    # 1. Реверсування списку
     def reverse(self):
         prev = None
         current = self.head
@@ -78,7 +78,7 @@ class LinkedList:
             current = next_node
         self.head = prev
 
-    # ✅ 2. Допоміжна: пошук середини списку
+    # 2. Допоміжна: пошук середини списку
     def _get_middle(self, head):
         if not head:
             return head
@@ -89,7 +89,7 @@ class LinkedList:
             fast = fast.next.next
         return slow
 
-    # ✅ 2. Допоміжна: злиття двох відсортованих списків
+    # 2. Допоміжна: злиття двох відсортованих списків
     def _sorted_merge(self, left, right):
         if not left:
             return right
@@ -104,7 +104,7 @@ class LinkedList:
             result.next = self._sorted_merge(left, right.next)
         return result
 
-    # ✅ 2. Сортування злиттям (merge sort)
+    # 2. Сортування злиттям (merge sort)
     def _merge_sort(self, head):
         if not head or not head.next:
             return head
@@ -121,7 +121,7 @@ class LinkedList:
     def sort(self):
         self.head = self._merge_sort(self.head)
 
-    # ✅ 3. Об'єднання двох відсортованих списків
+    # 3. Об'єднання двох відсортованих списків
     @staticmethod
     def merge_sorted_lists(list1, list2):
         dummy = Node()
@@ -145,7 +145,6 @@ class LinkedList:
         return merged
 
 
-# Створюємо список
 llist = LinkedList()
 llist.insert_at_beginning(5)
 llist.insert_at_beginning(10)
