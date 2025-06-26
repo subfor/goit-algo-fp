@@ -145,8 +145,6 @@ class LinkedList:
         return merged
 
 
-# ▶️ Тестування
-
 # Створюємо список
 llist = LinkedList()
 llist.insert_at_beginning(5)
@@ -158,20 +156,6 @@ llist.insert_at_end(25)
 print("📋 Початковий список:")
 llist.print_list()
 
-# # Видалення елемента
-# llist.delete_node(10)
-# print("\n❌ Після видалення вузла з даними 10:")
-# llist.print_list()
-#
-# # Пошук елемента
-# print("\n🔍 Пошук елемента 15:")
-# found = llist.search_element(15)
-# if found:
-#     print("Знайдено:", found.data)
-# else:
-#     print("Не знайдено.")
-#
-# Реверсування
 llist.reverse()
 print("\n🔁 Реверсований список:")
 llist.print_list()

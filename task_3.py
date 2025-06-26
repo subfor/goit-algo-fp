@@ -56,7 +56,6 @@ if __name__ == "__main__":
         path = reconstruct_path(previous, node)
         print(f"Найкоротший шлях до {node}: {path}, відстань: {distances[node]}")
 
-    # --- Візуалізація ---
     pos = nx.spring_layout(G, seed=42)
     nx.draw(
         G,
